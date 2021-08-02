@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Liverov/spacex-app/static/css/main.58116c9b.chunk.css",
-    "main.js": "/Liverov/spacex-app/static/js/main.85e37bc8.chunk.js",
-    "main.js.map": "/Liverov/spacex-app/static/js/main.85e37bc8.chunk.js.map",
-    "runtime-main.js": "/Liverov/spacex-app/static/js/runtime-main.a65d80cd.js",
-    "runtime-main.js.map": "/Liverov/spacex-app/static/js/runtime-main.a65d80cd.js.map",
-    "static/js/2.167c9aa9.chunk.js": "/Liverov/spacex-app/static/js/2.167c9aa9.chunk.js",
-    "static/js/2.167c9aa9.chunk.js.map": "/Liverov/spacex-app/static/js/2.167c9aa9.chunk.js.map",
-    "index.html": "/Liverov/spacex-app/index.html",
-    "static/css/main.58116c9b.chunk.css.map": "/Liverov/spacex-app/static/css/main.58116c9b.chunk.css.map",
-    "static/js/2.167c9aa9.chunk.js.LICENSE.txt": "/Liverov/spacex-app/static/js/2.167c9aa9.chunk.js.LICENSE.txt",
-    "static/media/heart.e1a8c95e.svg": "/Liverov/spacex-app/static/media/heart.e1a8c95e.svg"
+    "main.css": "/spacex-app/static/css/main.58116c9b.chunk.css",
+    "main.js": "/spacex-app/static/js/main.85e37bc8.chunk.js",
+    "main.js.map": "/spacex-app/static/js/main.85e37bc8.chunk.js.map",
+    "runtime-main.js": "/spacex-app/static/js/runtime-main.2f4567e6.js",
+    "runtime-main.js.map": "/spacex-app/static/js/runtime-main.2f4567e6.js.map",
+    "static/js/2.167c9aa9.chunk.js": "/spacex-app/static/js/2.167c9aa9.chunk.js",
+    "static/js/2.167c9aa9.chunk.js.map": "/spacex-app/static/js/2.167c9aa9.chunk.js.map",
+    "index.html": "/spacex-app/index.html",
+    "static/css/main.58116c9b.chunk.css.map": "/spacex-app/static/css/main.58116c9b.chunk.css.map",
+    "static/js/2.167c9aa9.chunk.js.LICENSE.txt": "/spacex-app/static/js/2.167c9aa9.chunk.js.LICENSE.txt",
+    "static/media/heart.e1a8c95e.svg": "/spacex-app/static/media/heart.e1a8c95e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a65d80cd.js",
+    "static/js/runtime-main.2f4567e6.js",
     "static/js/2.167c9aa9.chunk.js",
     "static/css/main.58116c9b.chunk.css",
     "static/js/main.85e37bc8.chunk.js"
