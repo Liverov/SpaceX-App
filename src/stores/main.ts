@@ -157,15 +157,15 @@ class Main {
 
   handleScroll(e: any) {
     return (
-      Math.floor(e.target.offsetHeight + e.target.scrollTop + 1) ===
-        e.target.scrollHeight &&
-      this.loadMoreLaunches()
+      Math.floor(
+        e.target.offsetHeight + e.target.scrollTop
+      ) === e.target.scrollHeight && this.loadMoreLaunches()
     )
   }
 
   loadMoreLaunches() {
-      this._page++
-      this.fetchData('Launches')
+    this._page++
+    this.fetchData('Launches')
   }
 }
 
