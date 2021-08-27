@@ -156,13 +156,8 @@ class Main {
   }
 
   handleScroll(e: any) {
-    console.log(
-      'Height+ScrollTop: ',
-      e.target.offsetHeight + e.target.scrollTop
-    )
-    console.log('ScrollHeight: ', e.target.scrollHeight)
     return (
-      Math.floor(
+      Math.ceil(
         e.target.offsetHeight + e.target.scrollTop
       ) === e.target.scrollHeight && this.loadMoreLaunches()
     )
