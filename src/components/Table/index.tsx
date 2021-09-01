@@ -23,22 +23,26 @@ const Table: React.FC = observer(() => {
             ? S.sidebar_open
             : S.sidebar_close
         }`}>
-        <InfiniteScroll
-          dataLength={mainStore.launchesItems.length}
-          next={mainStore.loadMoreLaunches}
-          hasMore={
-            api.totalLaunches >
-            mainStore.launchesItems.length
-          }
-          scrollableTarget="scrollableList"
-          loader={<h4>Loading launches...</h4>}
-          endMessage={
-            <p style={{textAlign: 'center'}}>
-              <b>Yay! You have seen it all</b>
-            </p>
-          }>
+        {mainStore.currentCategory === 'Launches' ? (
+          <InfiniteScroll
+            dataLength={mainStore.launchesItems.length}
+            next={mainStore.loadMoreLaunches}
+            hasMore={
+              api.totalLaunches >
+              mainStore.launchesItems.length
+            }
+            scrollableTarget="scrollableList"
+            loader={<h4>Loading launches...</h4>}
+            endMessage={
+              <p style={{textAlign: 'center'}}>
+                <b>Yay! You have seen it all</b>
+              </p>
+            }>
+            <List />
+          </InfiniteScroll>
+        ) : (
           <List />
-        </InfiniteScroll>
+        )}
       </div>
       <Description />
     </main>
