@@ -1,4 +1,4 @@
-import React, {Suspense} from 'react'
+import React from 'react'
 import {observer} from 'mobx-react'
 
 import {mainStore} from '../../stores'
@@ -40,9 +40,7 @@ const Table: React.FC = observer(() => {
           <List />
         </InfiniteScroll>
       </div>
-      <Suspense fallback={<h1>..Loading</h1>}>
-        <Description />
-      </Suspense>
+      <Description />
     </main>
   )
 })
