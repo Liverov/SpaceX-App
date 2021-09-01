@@ -1,28 +1,49 @@
-import React from 'react'
+import React, {Suspense} from 'react'
 import {observer} from 'mobx-react'
 
 import {mainStore} from '../../stores'
 
-import {Categories} from '../Category'
 import {List} from '../List'
+import {Categories} from '../Category'
 import {Description} from '../Description'
 
+import InfiniteScroll from 'react-infinite-scroll-component'
 import S from './styles.module.css'
 
-export const Table: React.FC = observer(() => {
+import {api} from '../../api'
+
+const Table: React.FC = observer(() => {
   return (
     <main className={S.main}>
       <Categories />
       <div
+        id="scrollableList"
         className={`${S.list} ${
           mainStore.sidebarIsOpen
             ? S.sidebar_open
             : S.sidebar_close
-        }`}
-        onScroll={(e) => mainStore.handleScroll(e)}>
-        <List />
+        }`}>
+        <InfiniteScroll
+          dataLength={mainStore.launchesItems.length}
+          next={mainStore.loadMoreLaunches}
+          hasMore={
+            api.totalLaunches >
+            mainStore.launchesItems.length
+          }
+          scrollableTarget="scrollableList"
+          loader={<h4>Loading launches...</h4>}
+          endMessage={
+            <p style={{textAlign: 'center'}}>
+              <b>Yay! You have seen it all</b>
+            </p>
+          }>
+          <List />
+        </InfiniteScroll>
       </div>
-      <Description />
+      <Suspense fallback={<h1>..Loading</h1>}>
+        <Description />
+      </Suspense>
     </main>
   )
 })
+export default Table

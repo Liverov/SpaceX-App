@@ -16,7 +16,6 @@ import S from './styles.module.css'
 
 export const List: React.FC = observer(() => {
   const currentData = mainStore.currentData
-
   return (
     <>
       {mainStore.currentCategory === 'Favorites' && (

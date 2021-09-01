@@ -7,8 +7,8 @@ import {
 import {favoritesStore, mainStore} from './index'
 
 class SearchStore {
-  keyword: string = ''
-  filterCategory: string = ''
+  keyword = ''
+  filterCategory = ''
 
   constructor() {
     makeObservable(this, {

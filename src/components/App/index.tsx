@@ -1,14 +1,13 @@
-import React, {useEffect} from 'react'
+import React, {Suspense, useEffect} from 'react'
 import {observer} from 'mobx-react'
 
 import {mainStore} from '../../stores'
 
 import {Header} from '../Header'
-import {Table} from '../Table'
-import {Loader} from '../Loader'
 
 import S from './styles.module.css'
-import {api} from '../../api'
+
+const Table = React.lazy(() => import('../Table'))
 
 export const App: React.FC = observer(() => {
   useEffect(() => {
@@ -16,22 +15,12 @@ export const App: React.FC = observer(() => {
     mainStore.fetchData('Rockets')
   }, [])
 
-  const loaderOrError = api.errorMessage ? (
-    <div className={S.error_message}>
-      {api.errorMessage}
-    </div>
-  ) : (
-    <Loader />
-  )
-
   return (
     <div className={S.app}>
       <Header />
-      {mainStore.currentData.length === 0 ? (
-        loaderOrError
-      ) : (
+      <Suspense fallback={<h1>....Loading</h1>}>
         <Table />
-      )}
+      </Suspense>
     </div>
   )
 })

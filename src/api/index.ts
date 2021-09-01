@@ -4,9 +4,9 @@ import {ILaunchesData, IRocketsData} from '../interfaces'
 export const BASE_URL = 'https://api.spacexdata.com/v4/'
 
 class Api {
-  totalLaunches: number = 0
-  totalRockets: number = 0
-  errorMessage: string = ''
+  totalLaunches = 0
+  totalRockets = 0
+  errorMessage = ''
   constructor() {
     makeObservable(this, {
       updateTotalLaunches: action.bound,

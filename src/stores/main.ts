@@ -48,8 +48,7 @@ class Main {
       setRocketsItems: action.bound,
       setRocketItem: action.bound,
       setItemId: action.bound,
-      toggleSidebar: action.bound,
-      handleScroll: action
+      toggleSidebar: action.bound
     })
   }
 
@@ -153,14 +152,6 @@ class Main {
 
   toggleSidebar(status: boolean) {
     this.sidebarIsOpen = status
-  }
-
-  handleScroll(e: any) {
-    return (
-      Math.ceil(
-        e.target.offsetHeight + e.target.scrollTop
-      ) === e.target.scrollHeight && this.loadMoreLaunches()
-    )
   }
 
   loadMoreLaunches() {
